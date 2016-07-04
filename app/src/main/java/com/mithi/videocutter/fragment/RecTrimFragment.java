@@ -63,6 +63,7 @@ public class RecTrimFragment extends Fragment {
             }
         });
         mVideoControlBtn.setEnabled(false);
+        mVideoControlBtn.setText("Play");
         return view;
     }
 
@@ -189,12 +190,14 @@ public class RecTrimFragment extends Fragment {
             videoView.pause();
             videoSliceSeekBar.setSliceBlocked(false);
             videoSliceSeekBar.removeVideoStatusThumb();
+            mVideoControlBtn.setText("Play");
         } else {
             videoView.seekTo(videoSliceSeekBar.getLeftProgress());
             videoView.start();
             videoSliceSeekBar.setSliceBlocked(true);
             videoSliceSeekBar.videoPlayingProgress(videoSliceSeekBar.getLeftProgress());
             videoStateObserver.startVideoProgressObserving();
+            mVideoControlBtn.setText("Stop");
         }
     }
 
@@ -230,6 +233,7 @@ public class RecTrimFragment extends Fragment {
 
                 videoSliceSeekBar.setSliceBlocked(false);
                 videoSliceSeekBar.removeVideoStatusThumb();
+                mVideoControlBtn.setText("Play");
             }
         }
     }
