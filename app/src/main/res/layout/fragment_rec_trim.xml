@@ -1,44 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical"
-        >
-
-        <ImageButton
-            android:id="@+id/rec_video"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/colorAccent"
-            android:padding="@dimen/activity_vertical_margin"
-            android:src="@drawable/ic_record_rec_white_48dp"
-            />
-
-        <ImageButton
-            android:id="@+id/cut_video"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:padding="@dimen/activity_vertical_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:src="@drawable/ic_content_cut_white_48dp"
-            />
-    </LinearLayout>
+    android:orientation="vertical">
     <ImageButton
         android:id="@+id/log_last_video"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/activity_vertical_margin"
+        android:layout_gravity="bottom|right"
         android:src="@drawable/ic_android_debug_bridge_white_48dp"
         android:background="@color/colorPrimaryDark"
+        android:visibility="gone"
         />
-</FrameLayout>
+    <LinearLayout
+        android:id="@+id/option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <ImageButton
+            android:id="@+id/rec_video"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@color/colorAccent"
+            android:src="@drawable/ic_record_rec_white_48dp"
+            />
+
+        <ImageButton
+            android:id="@+id/cut_video"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@color/colorPrimary"
+            android:padding="@dimen/activity_vertical_margin"
+            android:src="@drawable/ic_content_cut_white_48dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/weak_black"
+        android:padding="20dp">
+        <TextView
+            android:id="@+id/left_pointer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="--"/>
+
+        <Button
+            android:id="@+id/video_control_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play"
+            android:textSize="25sp"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/right_pointer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="--"/>
+    </LinearLayout>
+    <com.mithi.videocutter.model.VideoSliceSeekBar
+        android:id="@+id/seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_horizontal_margin"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <VideoView
+            android:id="@+id/video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+</LinearLayout>

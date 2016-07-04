@@ -3,13 +3,16 @@ package com.mithi.videocutter.util;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Environment;
-
 import com.github.hiteshsondhi88.libffmpeg.ExecuteBinaryResponseHandler;
 import com.github.hiteshsondhi88.libffmpeg.FFmpeg;
 import com.github.hiteshsondhi88.libffmpeg.exceptions.FFmpegCommandAlreadyRunningException;
 
 import java.io.File;
 import java.util.Locale;
+
+/**
+ * Created by mithilesh on 04/07/16.
+ */
 
 public class FFmpegUtils {
     private static final String TRIM_QUERY = " -acodec copy -f segment -segment_time %d -vcodec copy -reset_timestamps 1 -map 0 ";
@@ -38,6 +41,4 @@ public class FFmpegUtils {
     public static String getVideoCutterOutputDir() {
         return Environment.getExternalStorageDirectory().getPath() + "/" + OUTPUT_DIR + "/";
     }
-
-
 }
