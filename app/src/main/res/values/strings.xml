@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">VideoCutter</string>
+
+    <string name="error">Error</string>
+    <string name="trim_error">An error occurred while the video cutting</string>
+    <string name="trim_success">Videos successfully sliced</string>
+    <string name="video_is_not_recorded">Video is not recorded</string>
+</resources>
