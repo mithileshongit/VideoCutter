@@ -1,7 +1,7 @@
 # VideoCutter
 Using FFMPEG - cut slice of video of duration we define. 
 
-This is just sample of video, we are emproving it.
+This is just sample of video, we are improving it.
 
 ## While launching the app have 4 option 
 * Record Video
