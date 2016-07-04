@@ -10,4 +10,4 @@ This is just sample of video, we are emproving it.
 * seek bar to play duration of video which you select.
 
 ## ScreenShots
-![screenshots](https://raw.githubusercontent.com/mithileshongit/VideoCutter/master/device-2016-07-04-145724.png)
+![screenshots](https://raw.githubusercontent.com/mithileshongit/VideoCutter/master/device-2016-07-04-145724.png=100x20)
