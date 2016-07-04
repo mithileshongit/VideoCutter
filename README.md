@@ -11,4 +11,4 @@ This is just sample of video, we are emproving it.
 
 ## ScreenShots
 
-<img src="https://raw.githubusercontent.com/mithileshongit/VideoCutter/master/device-2016-07-04-145724.png" alt="Drawing" style="width: 100px;"/>
+<img src="https://raw.githubusercontent.com/mithileshongit/VideoCutter/master/device-2016-07-04-145724.png" alt="Drawing" style="width: 100px;height:200px;"/>
